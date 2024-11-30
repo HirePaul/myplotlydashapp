@@ -921,29 +921,15 @@ graph_test = dbc.Col(
                         )])
                     ],style={})], style=main_content)
 
-graph_test_6 = dbc.Col(
+graph_test_6 = dbc.Row(
             [
                 dbc.Col(makeCommandTable("Top 20 Commands",final_commands_list,TEXT,TEXT_STYLE),width=4.5,style={"margin-left":"3vw","width":"25vw","margin-top":"5vh"}),
-                dbc.Col([html.Div([html.H1("What do these fancy tests mean?",style=TEXT_STYLE),
-                                                        html.P("The p-value tells you the probability that the data observed occured\
-                                                               given that the null hypothesis is actually true. \n For our first (no latency) Kruskal-Wallis Test, our p-value of "+str(kw_list_4[1][1])+"\
-                                                               means that there is a "+str(format(float(kw_list_4[1][1])*100,'.3e'))+"% probability that our data occurs in this manner\
-                                                               given that there is no significant difference between\
-                                                               the median attacker connection times for no latency configurations with a 256 kbit banwdith \
-                                                                and a 2048kbit bandwidth.\
-                                                               Since our p-value of "+str(kw_list_4[1][1])+" is much lower than our alpha of 0.05 (accepted threshhold),\
-                                                               we reject the null hypothesis and support that there is a significant difference between the median attacker \
-                                                               connection times for no latency configurations with a CPU and a \
-                                                                CPU that has half the computing time.\
-                                                                For our second (1s  latency) Kruskal-Wallis Test, our p-value of "+str(kw_list_5[0][1])+"\
-                                                               means that there is a "+str(format(float(kw_list_5[0][1])*100,'.3e'))+"% probability that our data occurs in this manner\
-                                                               given that there is no significant difference between the median attacker connection times for 1 second latency configurations with a CPU and a \
-                                                                CPU that has half the computing time.\
-                                                               Since our p-value of "+str(kw_list_5[0][1])+" is much lower than our alpha of 0.05 (accepted threshhold),\
-                                                               we reject the null hypothesis and support that there is a significant difference between the median attacker\
-                                                               connection times for 1 second latency configurations with a CPU and a \
-                                                                CPU that has half the computing time.\
-                                                                For all of our other tests, the p-value is above the threshold, so we fail to reject our null hypotheses.\
+                dbc.Col([html.Div([html.H1("What can we conclude from our statistical tests?",style=TEXT_STYLE),
+                                                        html.P("What can we conclude from the results? Clearly, latency affects attacker behavior. We belive that by adding a latency, attackers become\
+                                                                discouraged and disconnect from the honeypot, sometimes before even running commands (which we see in our data, not presented here, as we must\
+                                                                use only data where we have a valid time count. However, it seems that in some situations, the amount of CPU affects attacker behavior as well.\
+                                                                This may be because attackers have to wait longer for responses when there is not as much CPU power. We believe that this project shows that a useful\
+                                                                deterrent to attackers may be limiting how quickly a connection can be established, as well as limiting how quickly the system works.\
                                                                ",style={"color":"white","font-size":"min(2.5vh,1vw)","overflowY":"scroll","height":"75vh"})])],width=4)
 
 
