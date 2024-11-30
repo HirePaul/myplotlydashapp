@@ -1,0 +1,60 @@
+.mytest {
+	font-family:Arial,
+	font-size:50px,
+	left:50%,
+	top:50%
+}
+.nav-pills .nav-link.active {
+	color: black !important;
+	background-color: white;
+	border-right: 1vh solid #7884c4;
+	border-radius: 1vh 0% 0% 0% !important
+}
+
+.textpoint text{
+	font-size: 4vh !important
+}
+
+.banana {
+	font-size: 4vh !important
+}
+
+.Select-control {
+  border-radius: 0 !important;
+  border: 0 !important;
+  color: white;
+  height: 6vh !important; 
+  font-size: min(4vh,2.5vw) !important;
+  line-height: 4vh !important;
+  background-color: black !important;
+  align-items: center; 
+  justify-content: center;
+}
+
+.Select-menu-outer {
+  color: white;
+  background-color: black;
+}
+
+.VirtualizedSelectOption {
+    background-color: black;
+    color: white !important;
+}
+
+.VirtualizedSelectFocusedOption {
+
+    background-color: black;
+    color: white;
+}
+
+.Select-value-label {
+position: relative;
+color: white !important;
+height: 7vh !important;
+}
+
+.Select-placeholder, .Select-arrow-zone, .Select-input, .Select-value-label, .Select-clear-zone {
+height: 7vh !important;
+line-height: 8vh !important;
+}
+
