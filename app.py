@@ -13,6 +13,7 @@ df = pd.DataFrame({
 
 # Initialize the app
 app = dash.Dash(__name__)
+server=app.server
 
 # App layout
 app.layout = html.Div([
