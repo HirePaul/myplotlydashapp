@@ -3,5 +3,6 @@ This project is a plotly/dash app for a live dashboard for a cybsersecurity rese
 It connects to live data (obviously only from specific IPs, sorry hackers).
 
 ![dashboard_image](dashboard_snippet.png)
+![dashboard_image](dashboard snippet 2.png)
 
 See app.py for the app.
